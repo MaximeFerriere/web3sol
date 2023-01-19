@@ -1,0 +1,19 @@
+@hostname = localhost
+@port = 3001
+@host = http://{{hostname}}:{{port}}
+
+###
+
+GET {{host}}/api/children/ HTTP/1.1
+Accept: application/json
+
+###
+POST {{host}}/api/children HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "Jerome",
+  "birthDate": "2021-03-17T10:27:15.187+00:00",
+  "gender": "M"
+}
